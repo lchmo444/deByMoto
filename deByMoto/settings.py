@@ -14,7 +14,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+PACKAGE_ROOT = os.path.abspath(os.path.dirname(__file__))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'testModelForm',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -55,8 +56,7 @@ ROOT_URLCONF = 'deByMoto.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
-        ,
+        'DIRS': ["/home/moto/PycharmProjects/byMotoGitHub/testModelForm/template/"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -100,4 +100,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
+
+#TEMPLATE_DIRS = (
+#  "/home/moto/PycharmProjects/byMoto/testModelForm/template/", "/home/moto/PycharmProjects/byMoto/templates",
+#)
+
+STATICFILES_DIRS = (
+  "/home/moto/PycharmProjects/byMotoGitHub/testModelForm/static/",
+)
