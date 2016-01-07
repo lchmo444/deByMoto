@@ -56,7 +56,7 @@ ROOT_URLCONF = 'deByMoto.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["/home/moto/PycharmProjects/byMotoGitHub/testModelForm/template/"],
+        'DIRS': ["/home/moto/PycharmProjects/deByMoto/testModelForm/template/"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -105,10 +105,6 @@ MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
-
-#TEMPLATE_DIRS = (
-#  "/home/moto/PycharmProjects/byMoto/testModelForm/template/", "/home/moto/PycharmProjects/byMoto/templates",
-#)
 
 STATICFILES_DIRS = (
   "/home/moto/PycharmProjects/byMotoGitHub/testModelForm/static/",
