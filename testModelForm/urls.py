@@ -5,6 +5,7 @@ from django.conf.urls.static import static
 from testModelForm.views import DataListView
 from testModelForm.views import AddDataView
 
+from testModelForm import views
 
 urlpatterns = patterns('',
 
@@ -15,6 +16,11 @@ urlpatterns = patterns('',
     url(r'^addData/$',
         AddDataView.as_view(),
         name='adddata'
+    ),
+
+    url(r'^delData/(?P<delid>\d+)/$',
+        views.delData,
+        name='deletedata'
     ),
 
 ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

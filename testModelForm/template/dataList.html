@@ -21,6 +21,7 @@
 		  	<td>Description</td>
 		  	<td>Level</td>
 		  	<td>Date</td>
+            <td>Action</td>
 		  </tr>
 
 		  {% for dd in dlist %}
@@ -30,6 +31,7 @@
     	    <td> {{ dd.dDescription }}</td>
     	    <td> {{ dd.dLevel }}</td>
     	    <td> {{ dd.dDate }}</td>
+            <td> <a class="btn btn-danger gdelete" id="delete{{dd.id}}" href="/testModel/delData/{{dd.id}}" role="button">Delete</a> </td>
     	  </tr>
           {% endfor %}
 
